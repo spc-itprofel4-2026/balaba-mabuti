@@ -19,14 +19,39 @@ use CodeIgniter\Config\BaseService;
  */
 class Services extends BaseService
 {
-    /*
-     * public static function example($getShared = true)
-     * {
-     *     if ($getShared) {
-     *         return static::getSharedInstance('example');
-     *     }
-     *
-     *     return new \CodeIgniter\Example();
-     * }
+    /**
+     * Cloud system of record for announcements (Supabase).
      */
+    public static function supabase(bool $getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('supabase');
+        }
+
+        return new \App\Libraries\SupabaseService();
+    }
+
+    /**
+     * Broadcast channel client (Viber Bot API).
+     */
+    public static function viber(bool $getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('viber');
+        }
+
+        return new \App\Libraries\ViberService();
+    }
+
+    /**
+     * Fullstack authentication (Supabase user_profiles + local mirror).
+     */
+    public static function auth(bool $getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('auth');
+        }
+
+        return new \App\Libraries\AuthService();
+    }
 }

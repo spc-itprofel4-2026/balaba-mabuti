@@ -67,3 +67,28 @@
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
+
+#--------------------------------------------------------------------
+# SUPABASE  (cloud system of record for announcements)
+#--------------------------------------------------------------------
+
+# supabase.url = 'https://YOUR-PROJECT-REF.supabase.co'
+# supabase.projectRef = 'YOUR-PROJECT-REF'
+# supabase.serviceRoleKey = 'service_role key (server-side only)'
+# supabase.accessToken = 'personal access token, used by `php spark supabase:setup`'
+
+#--------------------------------------------------------------------
+# VIBER  (broadcast channel)
+#--------------------------------------------------------------------
+
+# viber.botToken = ''
+# viber.senderName = 'Org Announcements'
+
+#--------------------------------------------------------------------
+# AUTH
+#--------------------------------------------------------------------
+
+# Leave blank to allow open registration; set a code to restrict sign-ups.
+# auth.inviteCode = 'SOME-CODE'
+
+# SUPABASE / VIBER placeholder note: see README
