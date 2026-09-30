@@ -128,3 +128,6 @@ _modules/*
 /writable/*.sqlite
 .env.*
 !.env.example
+
+# Composer dependencies
+vendor/
